@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es"><!--define el idioma en el que se va a codificar-->
+
+<head>
+    <meta charset="utf-8"><!--codifica de forma correcta los caracteres y acentos del idioma-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--activa response-->
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"><!--compatibilidad con navegadores viejos-->
+    <title>SCoMP Menú Principal</title>
+    <link rel="stylesheet" href="../proyectoScomp/estilos.css">
+    <!--apunta al archivo de estilos css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<header class="contenedor-header">
+    <div>
+        <a><img class="logo" src="../proyectoScomp/img/logo.png"
+                alt="SCoMP"></a>
+    </div>
+    <nav>
+        <ul class="menu-horizontal">
+            <li>
+                <a href="#">Usuarios</a>
+                <ul class="menu-vertical">
+                    <li><a href="../proyectoScomp/modificar_usuario.html">Modificar usuario</a></li>
+                    <li><a href="#">Crear usuario nuevo</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Registrar mercancía</a>
+                <ul class="menu-vertical">
+                    <li><a href="#">Registrar mercancía</a></li>
+                    <li><a href="#">Actualizar mercancía</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Consultar existencias</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Reportes</a></li>
+        </ul>
+    </nav>
+    <div>
+        <p class="nombre-usuario">Nombre de usuario</p>
+        <a class="cerrar-sesión" href="index.html">Cerrar sesión</a>
+    </div>
+</header>
+
+<body class="body-menu">
+    <div class="contenedor-cuerpo">
+        <div>
+            <h1>¡Hola! Nombre de usuario</h1>
+            <p>Bienvenido al Sistema de Control de Mercancía con Propósito (SCoMP), módulo de inventario diseñado para
+                la
+                compañia de detalles Samao Detalles.
+            </p>
+            <p class="fecha_hora" id="fecha_hora">
+                <script>
+                    function fecha_hora() {
+                        var now = new Date();
+                        document.getElementById('fecha_hora').innerHTML = now;
+                    }
+                    setInterval(fecha_hora, 1000);
+                </script>
+            </p>
+        </div>
+    </div>
+    <div>
+        <footer>
+            <p>Software creado para SamaoDetalles. &#169 2024 Saul Alberto Monroy Beltran</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es"><!--define el idioma en el que se va a codificar-->
+
+<head>
+    <meta charset="utf-8"><!--codifica de forma correcta los caracteres y acentos del idioma-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--activa response-->
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"><!--compatibilidad con navegadores viejos-->
+    <title>SCoMP Inicio de Sesión</title>
+    <link rel="stylesheet" href="../proyectoScomp/estilos.css"><!--apunta al archivo de estilos css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div>
+        <footer>
+            <p>Software creado para SamaoDetalles. &#169 2024 Saul Alberto Monroy Beltran</p>
+        </footer>
+    </div>
+    <div class="contenedor"><!--contenedor padre-->
+        <div class="imagen-sesión"></div>
+        <form class="formulario-sesión">
+            <div class="texto-sesión">
+                <h1>¡Bienvenido de nuevo!</h1>
+                <p>Inicia sesión con tus credenciales</p>
+            </div>
+            <i class="fa-solid fa-circle-user"></i>
+            <input name="usuario" type="text" placeholder="Ingresa el nombre de usuario" required><br><br>
+            <i class="fa-solid fa-unlock-keyhole"></i>
+            <input name="contraseña" type="password" placeholder="Ingresa la contraseña" required><br>
+            <div class="recordar-contraseña">
+                <a href="password.html">¿Olvidaste tu contraseña?</a>
+            </div><br>
+            <div class="boton">
+                <button id="ingresar" name="ingresar" type="submit" onclick="location.href='main_menu.html'">Ingresar</button><br>
+            </div><br>
+            <p class="fecha_hora" id="fecha_hora">
+                <script>
+                    function fecha_hora() {
+                        var now = new Date();
+                        document.getElementById('fecha_hora').innerHTML = now;
+                    }
+                    setInterval(fecha_hora, 1000);
+                </script>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
